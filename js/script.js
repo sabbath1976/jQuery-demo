@@ -41,21 +41,86 @@
 //     });
 // });
 
+// $(function () {
+//     $(window).resize(function () {
+//         if ($(window).height() > 700) {
+//             $("body").css({
+//                 background: "red",
+//             });
+//         } else if ($(window).height() > 300) {
+//             $("body").css({
+//                 background: "blue",
+//             });
+//         } else {
+//             $("body").css({
+//                 background: "yellow",
+//             });
+//         }
+//         // console.log($(window).width());
+//     });
+// });
+
+// $(function () {
+//     $(document).on("click", ".box-1", function () {
+//         $("body").css({
+//             background: "red",
+//         });
+//     });
+
+//     $(".box-2").on({
+//         click: function () {
+//             $("body").css({
+//                 background: "purple",
+//             });
+//         },
+//         mouseenter: function () {
+//             $("body").css({
+//                 background: "yellow",
+//             });
+//         },
+//         mouseleave: function () {
+//             $("body").css({
+//                 background: "red",
+//             });
+//         },
+//     });
+// });
+
+// $(function () {
+//     $(document).on("click", ".box-1", function () {
+//         $("body").css({
+//             background: "green",
+//             color: "#fff",
+//         });
+//     });
+// });
+
+// When we click the first object, the background gets red
 $(function () {
-    $(window).resize(function () {
-        if ($(window).height() > 700) {
+    $(".box-1").on({
+        click: function () {
             $("body").css({
-                background: "red",
+                background: "orange",
             });
-        } else if ($(window).height() > 300) {
+        },
+    });
+
+    // When we click the second object, the background gets purple,
+    $(".box-2").on({
+        click: function () {
             $("body").css({
-                background: "blue",
+                background: "purple",
             });
-        } else {
+        },
+        mouseenter: function () {
             $("body").css({
                 background: "yellow",
             });
-        }
-        // console.log($(window).width());
+        },
+        mouseleave: function () {
+            $("body").css({
+                background: "red",
+            });
+        },
     });
 });
