@@ -1,61 +1,108 @@
-// $("#last")
-//     .css({ background: "black", padding: "20px" })
-//     .fadeOut("slow", function () {
-//         console.log("hey it finished");
-//     });
-
-// $("#last p").css({ background: "red" });
-
-// $(".box-1").css({ background: "blue" });
-
-// $("#last")
-//     .css({ background: "black", color: "#fff", padding: "20px" })
-//     .fadeOut("slow", function () {
-//         console.log("hey it finished");
-//     });
-
 // $(function () {
-//     $("#last")
-//         .css({ background: "black", color: "#fff", padding: "20px" })
+//     $("#last p")
+//         .css({
+//             background: "red",
+//             color: "#fff",
+//         })
 //         .fadeOut("slow", function () {
-//             console.log("hey it finished");
+//             console.log("hey, it finished.");
 //         });
-// });
-
-// $(function () {
 //     $(window).resize(function () {
-//         if ($(window).height() > 700) {
+//         if ($(window).width() > 1000) {
 //             $("body").css({
 //                 background: "red",
+//                 color: "#fff",
 //             });
-//         } else if ($(window).height() > 300) {
+//         } else if ($(window).width() > 700) {
 //             $("body").css({
 //                 background: "blue",
+//                 color: "#fff",
 //             });
 //         } else {
 //             $("body").css({
 //                 background: "yellow",
+//                 color: "#000",
 //             });
 //         }
-//         // console.log($(window).width());
+
+//         console.log($(window).width());
+//     });
+// });
+
+// $(function () {
+//     $(".box-1").on("click", function () {
+//         $("body").css({
+//             background: "red",
+//             color: "#000",
+//         });
+//     });
+
+//     $(".box-2").on({
+//         click: function () {
+//             $("body").css({
+//                 background: "purple",
+//                 color: "#fff",
+//             });
+//         },
+
+//         mouseenter: function () {
+//             $("body").css({
+//                 background: "yellow",
+//                 color: "#000",
+//             });
+//         },
+
+//         mouseleave: function () {
+//             $("body").css({
+//                 background: "green",
+//                 color: "#fff",
+//             });
+//         },
 //     });
 // });
 
 $(function () {
-    $(window).resize(function () {
-        if ($(window).height() > 700) {
-            $("body").css({
-                background: "red",
-            });
-        } else if ($(window).height() > 300) {
-            $("body").css({
-                background: "blue",
+    $(".box-1 a").on("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        $(".box-3").css({
+            background: "purple",
+            color: "#fff",
+        });
+    });
+
+    $(".box-1").on("click", function () {
+        $(".box-3").css({
+            background: "#ccc",
+            color: "#000",
+        });
+    });
+
+    $(".box-2").on("click", function () {
+        $(".box-3").css({
+            background: "red",
+            color: "#000",
+        });
+    });
+
+    $(".btn").on("click", function (event) {
+        event.stopPropagation();
+
+        if (event.target.nodeName == "DIV") {
+            $(".box-3").css({
+                background: "yellowgreen",
+                color: "#000",
             });
         } else {
-            $("body").css({
+            $(".box-3").css({
                 background: "yellow",
+                color: "#000",
             });
         }
-        // console.log($(window).width());
     });
 });
+// console.log(event.target.nodeName);
+// $(".box-3").css({
+//     background: "yellowgreen",
+// });
