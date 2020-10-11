@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css" />
         <title>jQuery</title>
     </head>
 
@@ -19,8 +19,18 @@
             <div class="button">BUTTON</div>
         </div>
 
-        <div class="box box-3">
-            <p>Hey, it's Joe</p>
+        <div class="box box-3" id="last">
+            <!-- <p>Hey, it's Joe</p> -->
+
+            <form action="index.html" method="post">
+                <select name="state" class="select-options">
+                    <option value="NY">NY</option>
+                    <option value="FL">FL</option>
+                    <option value="TX">TX</option>
+                </select>
+
+                <input type="text" class="myname" name="myname" />
+            </form>
         </div>
 
         <script src="js/jquery.min.js"></script>

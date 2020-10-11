@@ -105,7 +105,7 @@
 //         },
 //     });
 
-    // When we click the second object, the background gets purple,
+// When we click the second object, the background gets purple,
 //     $(".box-2").on({
 //         click: function () {
 //             $("body").css({
@@ -122,37 +122,58 @@
 //                 background: "red",
 //             });
 //         },
-    // });
+// });
 // });
 
-$(function() {
-    $('.box-1 a').on('click', function(event) {
-        event.preventDefault()
-        $('.box-3').css({
-            background: 'purple'
-        })
-    })
+// $(function() {
+//     $('.box-1 a').on('click', function(event) {
+//         event.preventDefault()
+//         $('.box-3').css({
+//             background: 'purple'
+//         })
+//     })
 
-    $('.box-2').on('click', function() {
-        $('.box-3').css({
-            background: 'red'
-        })
-    })
+//     $('.box-2').on('click', function() {
+//         $('.box-3').css({
+//             background: 'red'
+//         })
+//     })
 
-    $('.button').on('click', function(event) {
-        event.stopPropagation()
-        
-        if (event.target.nodeName == 'DIV') {
-            console.log(event.target.nodeName);
-            $('.box-3').css({
-                background: 'purple'
-            })
-        } else {
-            console.log(event.target.nodeName)
-            $('.box-3').css({
-                background: 'yellow'
-            })
-        }
-        
-    })
-})
+//     $('.button').on('click', function(event) {
+//         event.stopPropagation()
+
+//         if (event.target.nodeName == 'DIV') {
+//             console.log(event.target.nodeName);
+//             $('.box-3').css({
+//                 background: 'purple'
+//             })
+//         } else {
+//             console.log(event.target.nodeName)
+//             $('.box-3').css({
+//                 background: 'yellow'
+//             })
+//         }
+
+//     })
+// })
+
+$(function () {
+    $(".select-options").change(function () {
+        alert("Changed value");
+    });
+
+    $(".myname")
+        .change(function (event) {
+            $(".box-1").html("<h1>" + event.target.value + "</h1>");
+        })
+        .focusin(function () {
+            $(".box-2").css({
+                background: "blue",
+            });
+        })
+        .focusout(function () {
+            $(".box-2").css({
+                background: "#ccc",
+            });
+        });
+});
