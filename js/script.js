@@ -178,20 +178,27 @@
 //         });
 // });
 
+// $(function() {
+//     $('div').addClass('active')
+
+//     if ($('div').hasClass('active')) {
+//         console.log('This div element has been activated');
+//     } else {
+//         console.log('Sorry, waiting to be activated!');
+//     }
+
+//     console.log($('div').hasClass('active'));
+
+//     // $('div').first().removeClass('active')
+
+//     $('.button').click(function() {
+//         $('div').toggleClass('active')
+//     })
+// })
+
 $(function() {
-    $('div').addClass('active')
-
-    if ($('div').hasClass('active')) {
-        console.log('This div element has been activated');
-    } else {
-        console.log('Sorry, waiting to be activated!');
-    }
-
-    console.log($('div').hasClass('active'));
-
-    // $('div').first().removeClass('active')
-
     $('.button').click(function() {
-        $('div').toggleClass('active')
+        // $('.box-1').clone().appendTo('body')
+        $('.box-1:first').clone().appendTo('body')
     })
 })
