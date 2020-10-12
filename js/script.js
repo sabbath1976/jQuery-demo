@@ -157,23 +157,41 @@
 //     })
 // })
 
-$(function () {
-    $(".select-options").change(function () {
-        alert("Changed value");
-    });
+// $(function () {
+//     $(".select-options").change(function () {
+//         alert("Changed value");
+//     });
 
-    $(".myname")
-        .change(function (event) {
-            $(".box-1").html("<h1>" + event.target.value + "</h1>");
-        })
-        .focusin(function () {
-            $(".box-2").css({
-                background: "blue",
-            });
-        })
-        .focusout(function () {
-            $(".box-2").css({
-                background: "#ccc",
-            });
-        });
-});
+//     $(".myname")
+//         .change(function (event) {
+//             $(".box-1").html("<h1>" + event.target.value + "</h1>");
+//         })
+//         .focusin(function () {
+//             $(".box-2").css({
+//                 background: "blue",
+//             });
+//         })
+//         .focusout(function () {
+//             $(".box-2").css({
+//                 background: "#ccc",
+//             });
+//         });
+// });
+
+$(function() {
+    $('div').addClass('active')
+
+    if ($('div').hasClass('active')) {
+        console.log('This div element has been activated');
+    } else {
+        console.log('Sorry, waiting to be activated!');
+    }
+
+    console.log($('div').hasClass('active'));
+
+    // $('div').first().removeClass('active')
+
+    $('.button').click(function() {
+        $('div').toggleClass('active')
+    })
+})
