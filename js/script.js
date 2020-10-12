@@ -196,9 +196,20 @@
 //     })
 // })
 
+// $(function() {
+//     $('.button').click(function() {
+//         // $('.box-1').clone().appendTo('body')
+//         $('.box-1:first').clone().appendTo('body')
+//     })
+// })
+
 $(function() {
     $('.button').click(function() {
-        // $('.box-1').clone().appendTo('body')
-        $('.box-1:first').clone().appendTo('body')
+        $('.box-1').wrapInner('<div class="active"></div>')
+        // $('.box-1').unwrap('.active')
+    })
+
+    $('.box-3').click(function() {
+        $('.box-1').unwrap('.active')
     })
 })
