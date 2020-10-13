@@ -203,13 +203,23 @@
 //     })
 // })
 
+// $(function() {
+//     $('.button').click(function() {
+//         $('.box-1').wrapInner('<div class="active"></div>')
+//         // $('.box-1').unwrap('.active')
+//     })
+
+//     $('.box-3').click(function() {
+//         $('.box-1').unwrap('.active')
+//     })
+// })
+
 $(function() {
     $('.button').click(function() {
-        $('.box-1').wrapInner('<div class="active"></div>')
-        // $('.box-1').unwrap('.active')
-    })
-
-    $('.box-3').click(function() {
-        $('.box-1').unwrap('.active')
+        // $('<div class="active">Active Box</div>').appendTo('.box-1')
+        // $('.box-1').html('<div class="active">new box-1 content</div>')
+        // $('<div class="active">new box-1 content</div>').prependTo('.box-1');
+        console.log($('.firstP:first').text());
+        $('.firstP:first').text('The new Joe Text')
     })
 })
