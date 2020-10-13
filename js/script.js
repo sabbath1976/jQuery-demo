@@ -233,9 +233,17 @@
 //     })
 // })
 
+// $(function() {
+//     $('.button').click(function() {
+//         // $('.box-1').remove()
+//         $('div').remove('.box')
+//     })
+// })
+
+// Replace an Element
 $(function() {
-    $('.button').click(function() {
-        // $('.box-1').remove()
-        $('div').remove('.box')
+    $('.button').click(function(){
+        // $('<div class="active">NEW ACTIVE Box</div>').replaceAll('.box')
+        $('.box').replaceWith('<h2>New heading</h2>')
     })
 })
