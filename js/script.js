@@ -224,11 +224,18 @@
 //     })
 // })
 
+// $(function() {
+//     $('.button').click(function() {
+//         // $('.firstP:first').after('<p>NEW MESSAGE</p>')
+//         // $('.firstP:first').before('<p>NEW MESSAGE</p>')
+//         // $('<p>NEW MESSAGE</p>').insertBefore('.firstP:first')
+//         $('<p>NEW MESSAGE</p>').insertAfter('.firstP:first')
+//     })
+// })
+
 $(function() {
     $('.button').click(function() {
-        // $('.firstP:first').after('<p>NEW MESSAGE</p>')
-        // $('.firstP:first').before('<p>NEW MESSAGE</p>')
-        // $('<p>NEW MESSAGE</p>').insertBefore('.firstP:first')
-        $('<p>NEW MESSAGE</p>').insertAfter('.firstP:first')
+        // $('.box-1').remove()
+        $('div').remove('.box')
     })
 })
