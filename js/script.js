@@ -214,12 +214,21 @@
 //     })
 // })
 
+// $(function() {
+//     $('.button').click(function() {
+//         // $('<div class="active">Active Box</div>').appendTo('.box-1')
+//         // $('.box-1').html('<div class="active">new box-1 content</div>')
+//         // $('<div class="active">new box-1 content</div>').prependTo('.box-1');
+//         console.log($('.firstP:first').text());
+//         $('.firstP:first').text('The new Joe Text')
+//     })
+// })
+
 $(function() {
     $('.button').click(function() {
-        // $('<div class="active">Active Box</div>').appendTo('.box-1')
-        // $('.box-1').html('<div class="active">new box-1 content</div>')
-        // $('<div class="active">new box-1 content</div>').prependTo('.box-1');
-        console.log($('.firstP:first').text());
-        $('.firstP:first').text('The new Joe Text')
+        // $('.firstP:first').after('<p>NEW MESSAGE</p>')
+        // $('.firstP:first').before('<p>NEW MESSAGE</p>')
+        // $('<p>NEW MESSAGE</p>').insertBefore('.firstP:first')
+        $('<p>NEW MESSAGE</p>').insertAfter('.firstP:first')
     })
 })
