@@ -241,9 +241,25 @@
 // })
 
 // Replace an Element
+// $(function() {
+//     $('.button').click(function(){
+//         // $('<div class="active">NEW ACTIVE Box</div>').replaceAll('.box')
+//         $('.box').replaceWith('<h2>New heading</h2>')
+//     })
+// })
+
+// Attributes and values
 $(function() {
-    $('.button').click(function(){
-        // $('<div class="active">NEW ACTIVE Box</div>').replaceAll('.box')
-        $('.box').replaceWith('<h2>New heading</h2>')
+    $('.button').click(function() {
+        // console.log($('.box-3 img').attr('data-imgName')); // show the value
+        // $('.box-3 img').attr({
+        //     alt: 'Vegeta New Pic',
+        //     class: 'vegeta active img'
+        // })
+        console.log($('.box-1 input.username').val()); // get the value of an element
     })
+
+    // $('.box-3').click(function() {
+    //     $('.box-3 img').removeAttr('alt')
+    // })
 })
