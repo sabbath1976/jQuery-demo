@@ -277,3 +277,29 @@
 //         paddingLeft: '50px'
 //     })
 // })
+
+$(function() {
+    // console.log($('.firstP').parent());
+    console.log($('.box-1').children());
+
+    $('.box-1').children().css({
+        background: 'blue',
+        display: 'inline-block',
+        padding: '20px',
+        color: '#fff',
+        margin: '20px'
+    })
+
+    $('p').each(function() {
+        console.log(this);
+
+        $(this).css({
+            background: 'yellow',
+            color: '#000'
+        })
+    })
+
+    $('ul li').first().css({
+        background: 'green'
+    })
+})
