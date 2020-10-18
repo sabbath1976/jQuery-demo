@@ -278,28 +278,45 @@
 //     })
 // })
 
+// $(function() {
+//     // console.log($('.firstP').parent());
+//     console.log($('.box-1').children());
+
+//     $('.box-1').children().css({
+//         background: 'blue',
+//         display: 'inline-block',
+//         padding: '20px',
+//         color: '#fff',
+//         margin: '20px'
+//     })
+
+//     $('p').each(function() {
+//         console.log(this);
+
+//         $(this).css({
+//             background: 'yellow',
+//             color: '#000'
+//         })
+//     })
+
+//     $('ul li').first().css({
+//         background: 'green'
+//     })
+// })
+
 $(function() {
-    // console.log($('.firstP').parent());
-    console.log($('.box-1').children());
-
-    $('.box-1').children().css({
-        background: 'blue',
-        display: 'inline-block',
-        padding: '20px',
-        color: '#fff',
-        margin: '20px'
-    })
-
-    $('p').each(function() {
-        console.log(this);
-
-        $(this).css({
-            background: 'yellow',
-            color: '#000'
+    $('.btn').click(function() {
+        var request = $.ajax({
+            url: "http://www.google.gr",
+            method: "GET"
         })
-    })
 
-    $('ul li').first().css({
-        background: 'green'
+        request.done(function(data) {
+            console.log(data);
+        })
+
+        request.fail(function(jqXHR, textStatus, error) {
+            alert("Request failed: " + textStatus + ' ' + error)
+        })
     })
 })
