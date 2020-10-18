@@ -307,8 +307,13 @@
 $(function() {
     $('.btn').click(function() {
         var request = $.ajax({
-            url: "http://www.google.gr",
-            method: "GET"
+            url: "http://jsonplaceholder.typicode.com/posts",
+            method: "POST",
+            data: {
+                title: 'Top 10 best places to live',
+                body: "The type of data that you're expecting back from the server",
+                userId: 20
+            }
         })
 
         request.done(function(data) {
