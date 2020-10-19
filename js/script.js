@@ -307,8 +307,8 @@
 $(function() {
     $('.btn').click(function() {
         var request = $.ajax({
-            url: "http://jsonplaceholder.typicode.com/posts/1",
-            method: "DELETE"
+            // url: "http://jsonplaceholder.typicode.com/posts/1",
+            // method: "DELETE"
             // data: {
             //     title: 'Top 5 best cities to live',
             //     body: "The type of data that you're expecting back from the server",
