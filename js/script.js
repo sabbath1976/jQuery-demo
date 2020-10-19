@@ -307,10 +307,10 @@
 $(function() {
     $('.btn').click(function() {
         var request = $.ajax({
-            url: "http://jsonplaceholder.typicode.com/posts",
-            method: "POST",
+            url: "http://jsonplaceholder.typicode.com/posts/1",
+            method: "PUT",
             data: {
-                title: 'Top 10 best places to live',
+                title: 'Top 5 best cities to live',
                 body: "The type of data that you're expecting back from the server",
                 userId: 20
             }
