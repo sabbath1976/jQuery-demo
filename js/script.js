@@ -305,9 +305,13 @@
 // })
 
 $(function() {
+    var pokemonSearch;
+
     $('.btn').click(function() {
+        pokemonSearch = $('.pokedex input[type="text"]').val()
+
         var request = $.ajax({
-            url: "https://pokeapi.co/api/v2/pokemon/pikachu",
+            url: "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch,
             method: "GET"
             // data: {
             //     title: 'Top 5 best cities to live',
@@ -317,6 +321,8 @@ $(function() {
         })
 
         request.done(function(data) {
+            $('.pokedex h3').text(data.name.toUpperCase())
+            $('.poke-img img').attr('src', data.sprites.front_default)
             console.log(data);
         })
 

@@ -12,7 +12,7 @@ $green: #4ea654;
 
 body {
     font-family: "Roboto", sans-serif;
-    background: $darkRed;
+    background: $grey;
 }
 
 .pokedex {
@@ -32,6 +32,13 @@ body {
         margin: 25px 0;
     }
 
+    h3 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 25px 0;
+    }
+
     form {
         text-align: center;
     }
@@ -47,8 +54,8 @@ body {
 
     .btn {
         display: inline-block;
-        background: #000;
-        color: $mainRed;
+        background: $blue;
+        color: #fff;
         padding: 20px;
         cursor: pointer;
     }
