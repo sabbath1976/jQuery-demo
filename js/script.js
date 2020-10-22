@@ -306,18 +306,37 @@
 
 $(function() {
     var pokemonSearch;
+    var defaultPokemon = '1';
+    var defaultPokemonData;
+
+    var initFunc = function() {
+        defaultPokemonData = $.ajax({
+            url: "https://pokeapi.co/api/v2/pokemon/" + defaultPokemon,
+            method: "GET"
+        })
+
+        defaultPokemonData.done(function(data) {
+            defaultPokemonData = data;
+            $('.loading-container').removeClass('active')
+            $('.pokedex h3').text(data.name.toUpperCase())
+            $('.poke-img img').attr('src', data.sprites.front_default)
+            console.log(data);
+        })
+
+        defaultPokemonData.fail(function(jqXHR, textStatus, error) {
+            alert("Request failed: " + textStatus + ' ' + error)
+            // console.log(error);
+        })
+    }
+
+    initFunc();
 
     $('.btn').click(function() {
-        pokemonSearch = $('.pokedex input[type="text"]').val()
+        pokemonSearch = $('.pokedex input[type="text"]').val()      
 
         var request = $.ajax({
             url: "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch,
             method: "GET"
-            // data: {
-            //     title: 'Top 5 best cities to live',
-            //     body: "The type of data that you're expecting back from the server",
-            //     userId: 20
-            // }
         })
 
         request.done(function(data) {
